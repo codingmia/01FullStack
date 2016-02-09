@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset = "UTF-8">
+        <title> My Dating Site</title>
+        <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+		<style>
+		fieldset{
+			background: lightyellow;
+			border:10px solid yellow;
+			margin-bottom:10px;
+			width: 720px;
+		}
+		label{
+			width:180px; 
+			display:inline-block; 
+			text-align: right; 
+			text-align: top
+		}
+
+		.autolabel{
+			width: auto;
+		}
+		.toplabel{
+			width:180px; 
+			display:inline-block; 
+			vertical-align:top;
+			text-align: right; 
+			text-align: top
+		}
+		.rangeMinlabel{
+			color: white;
+			background: red;
+			width: 60px;
+			text-align: center;
+		}
+		.rangeMaxlabel{
+			color: white;
+			background: purple;
+			width: 60px;
+			text-align: center;
+		}
+		.addressbox{
+			width: 360px;
+			height: 50px;
+		}
+		.narrowInput{
+			width: 30px;
+		}
+		.wideInput{
+			width: 125px;
+		}
+		</style>
+	</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+<form method= "post" enctype="multipart/form-data"
+	action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+	<fieldset class="fieldset">	
+		<legend>Your Face</legend>
+		<label for="avatar">Your image:</label>
+		<input type="file" id="avatar" name="avatar" required></input></br>
+		<label for="preview">Image Preview:</label>
+		<img name="preview" id="preview"/>
+	</fieldset>
+	<fieldset class="fieldset">
+		<legend>Your General Details</legend>
+		<label for="name">Name:</label>	
+		<input class="wideInput" type="text" id="name" name="name" placeholder="Your full name" required></input></br>
+		<label>Gender:</label>	
+		<input type="radio" name="gender" id="male" value="M" required></input>
+		<label class="autolabel" for="male">Male</label>
+		<input type="radio" name="gender" id="female" value="F" required></input>
+		<label class="autolabel" for="female">Female</label>
+		</br>
+		<label for="age">Age:</label>
+		<input class="narrowInput" type="number" name="age" value="18" required></input>
+		</br>
+		<label for="birthday" name="birthday">Date of birth:</label>
+		<input class="wideInput" type="date" name="birthday" required></input>
+		</br>
+		<label for="favColor" name="favColor" >Favorite color:</label>
+		<input type="color" name="favColor" value="black"></input>
+		</br>
+		<label for="country" name="country" >Which Country:</label>
+		<select name="country">
+		<option value="default"> </option>
+		<option value="United States">United States</option>
+		<option value="United Kingdom">United Kingdom</option>
+		<option value="France">France</option>
+		<option value="China">China</option>
+		<option value="Russia">Russia</option>		
+		</select>
+	</fieldset>
+	<fieldset class="fieldset">
+		<legend>Your Indicators</legend>
+		<label for="height" name="height" >Height:</label>
+		<label class="rangeMinlabel">Short</label>
+		<input type="range" min="0" max="100" step="5" value="50"
+		id="height" name="height"> 
+		<label class="rangeMaxlabel">Tall</label>
+		<br>	
+		<label for="salary" name="salary" >Salary:</label>
+		<label class="rangeMinlabel">Poor</label>
+		<input type="range" min="0" max="100" step="5" value="50"
+		id="salary" name="salary"> 
+		<label class="rangeMaxlabel">Rich</label>
+		<br>
+	</fieldset>
+	<fieldset class="fieldset">
+		<legend>Your Contact Information</legend>
+		<label for="email">Email:</label>	
+		<input class="wideInput" type="email" id="email" name="Email" required></input>
+	</br>
+		<label for="mobile">Mobile:</label>	
+		<input class="wideInput" type="tel" id="mobile" name="Mobile" required></input>
+	</br>
+		<label class="toplabel" for="address">Address:</label>	
+		<textarea class="addressbox" id="address" name="Address" required></textarea>
+	</br>
+		<label>Method to contact you:</label>	
+		<label class="autolabel"><input type="checkbox" name="contact" value="Emails"/> Email</label>
+		<label class="autolabel"><input type="checkbox" name="contact" value="Whatsapp"/> Whatsapp</label>
+		<label class="autolabel"><input type="checkbox" name="contact" value="Chat"/> In-app chat</label>
+	</fieldset>
+	<input type="submit" name="submit" value="Submit" />
+</form>
+</body>

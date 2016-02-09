@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <title>Guess the Color Game</title>
+</head>
+    <body onload="do_game()">
+        <script>
+		/* Declare variables and constants*/
+		var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+		var question = "I am thinking of one of these colors:\n\n" + 
+		"blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n"+
+		"What color am I thinking of?\n";
+		var invalidMsg = "Sorry, I don't recognize your color.\n\n" +
+		"Please try again.";
+		var lowerMsg = "Sorry, your guess is not correct!\n\n" +
+		"Hint: your color is alphabetically lower than mine.\n\n" +
+		"Please try again.";
+		var higherMsg = "Sorry, your guess is not correct!\n\n" +
+		"Hint: your color is alphabetically higher than mine.\n\n" +
+		"Please try again.";
+		
+		var user_guess;
+		var finished = false;
+		var numOfGuess = 0;
+		var colorString = colors.join();
+		var target_index = 0;
+		var target = colors[target_index];
+		
+		/* Main function*/
+		function do_game(){
+			//Pick a random color in array
+			target_index = Math.floor(Math.random()*colors.length);
+			target = colors[target_index];		
+			//alert(target); //for reviewer: please uncomment this line for the correct color.
+			while(!finished){
+				user_guess = prompt(question);
+				numOfGuess += 1;
+				finished = check_guess();
+			}
+		}
+		/* Helper function which checks user input and provides feedback*/
+		function check_guess(){
+			if(colorString.indexOf(user_guess) < 0){
+				alert(invalidMsg);
+				return false;
+			}else if(user_guess < target){
+				alert(lowerMsg);
+				return false;
+			}else if(user_guess > target){
+				alert(higherMsg);
+				return false;
+			}else{
+				myBody=document.getElementsByTagName("body")[0];
+				myBody.style.background=target;				
+				var successMsg = "Congratulations! You have guessed the color!\n\n"+
+				"It took you "+ numOfGuess +" times to finish the game!\n\n"+
+				"You can see the colour in the background.";				
+				alert(successMsg);				
+				return true;
+			}
+		}
+        </script>
+    </body>
+</html>

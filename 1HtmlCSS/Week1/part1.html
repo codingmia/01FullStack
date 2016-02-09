@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset = "UTF-8">
+        <title> My Dating Site</title>
+        <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+<form method= "post" enctype="multipart/form-data"
+	action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+	<fieldset>
+		<legend>Your Face</legend>
+	<div>		
+		<label for="avatar">Your image:</label>
+		<input type="file" id="avatar" name="avatar" required></input>
+	</div>
+	<div>
+		<label for="preview">Image Preview:</label>
+		<img name="preview" id="preview"/>
+	</div>
+	</fieldset>
+	<fieldset>
+		<legend>Your General Details</legend>
+	<div>
+		<label for="name">Name:</label>	
+		<input type="text" id="name" name="name" placeholder="Your full name" required></input>
+	</div>
+	<div>
+		<span class="title">Gender:</span>	
+		<input type="radio" name="gender" id="male" value="M" required></input>
+		<label for="male">Male</label>
+		<input type="radio" name="gender" id="female" value="F" required></input>
+		<label for="female">Female</label>
+	</div>
+	<div>
+		<label for="age">Age:</label>
+		<input type="number" name="age" value="18" required></input>
+	</div>
+	<div>
+		<label for="birthday" name="birthday">Date of birth:</label>
+		<input type="date" name="birthday" required></input>
+	</div>
+	<div>
+		<label for="favColor" name="favColor" >Favorite color:</label>
+		<input type="color" name="favColor" value="black"></input>
+	</div>	
+	<div>
+		<label for="country" name="country" >Which Country:</label>
+		<select name="country">
+		<option value="default"> </option>
+		<option value="United States">United States</option>
+		<option value="United Kingdom">United Kingdom</option>
+		<option value="France">France</option>
+		<option value="China">China</option>
+		<option value="Russia">Russia</option>		
+		</select>
+	</div>	
+	</fieldset>
+	<fieldset>
+		<legend>Your Indicators</legend>
+		<label for="height" name="height" >Height:</label>
+		Short<input type="range" min="0" max="100" step="5" value="50"
+		id="height" name="height"> Tall<br>	
+		<label for="salary" name="salary" >Salary:</label>
+		Poor<input type="range" min="0" max="100" step="5" value="50"
+		id="salary" name="salary"> Rich<br>
+	</fieldset>
+	<fieldset>
+		<legend>Your Contact Information</legend>
+		<div>
+		<label for="email">Email:</label>	
+		<input type="email" id="email" name="Email" required></input>
+	</div>
+	<div>
+		<label for="mobile">Mobile:</label>	
+		<input type="tel" id="mobile" name="Mobile" required></input>
+	</div>
+	<div>
+		<label for="address">Address:</label>	
+		<textarea id="address" name="Address" required></textarea>
+	</div>
+	<div>
+		<span class="contact">Method to contact you:</span>	
+		<input type="checkbox" name="contact" value="Emails"/> Email
+		<input type="checkbox" name="contact" value="Whatsapp"/> Whatsapp
+		<input type="checkbox" name="contact" value="Chat"/> In-app chat
+	</div>
+	</fieldset>
+	<input type="submit" name="submit" value="Submit" />
+</form>
+</body>

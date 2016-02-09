@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <script>	
+            function generateFaces(){
+				var numberOfFaces = 5;
+				var theLeftSide = document.getElementById("leftSide");
+				var theRightSide = document.getElementById("rightSide");
+				for(var i = 0; i < numberOfFaces; i++){
+					var newimg = document.createElement("img");
+					newimg.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+					newimg.style.top = Math.floor(Math.random()*425) + "px";
+					newimg.style.left = Math.floor(Math.random()*425) + "px";
+					theLeftSide.appendChild(newimg);
+				}				
+				var leftSideImages = theLeftSide.cloneNode(true);
+				leftSideImages.removeChild(leftSideImages.lastChild);
+				theRightSide.appendChild(leftSideImages);
+            }
+        </script>
+        <style>
+            div
+			{
+				position:absolute;
+				width:500px;
+				height:500px
+			 } 
+			img{position:absolute; 
+				width: 75px;
+				height: 75px}
+			#rightSide 
+			{ left: 500px; 
+			  border-left: 1px solid black }
+			
+        </style>
+    </head>
+    <body id="theBody" onload="generateFaces()">
+        <title>Matching Game</title>      
+		<h1>Matching Game</h1>
+		<p>Click on the extra smiling face on the left.</p>
+	    <div id="leftSide"></div>
+
+	    <div id="rightSide"></div>
+    </body>
+</html>
