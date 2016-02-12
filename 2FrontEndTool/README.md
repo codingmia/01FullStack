@@ -1,6 +1,6 @@
-## FrontEnd tool used
+## FrontEnd tools used
 
-Bootstrap, CSS, JQuery, 
+Bootstrap, CSS, JQuery
 
 ## Introduced tools
 NPM, Bower
