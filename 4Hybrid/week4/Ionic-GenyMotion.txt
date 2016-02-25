@@ -1,0 +1,44 @@
+
+===Start Server====
+cd DEV/01_FullStack/4Hybrid/week4
+
+json-server --watch db.json
+
+ionic serve --lab
+
+===Make Camera To Work===
+Try below steps:
+
+Close the Eclipse if running
+Go to the Android SDK platform-tools directory in Command Prompt
+type adb kill-server (Eclipse should be closed before issuing these commands)
+then type adb start-server
+No error message is thrown while starting ADB server, then adb is started successfully.
+Now you can start Eclipse again.
+
+== run the ionic on GenyMotion ===
+
+1. cd to your Ionic/conFusion folder
+2. do:
+ionic build android
+3. Make sure the GenyMotion device was started:
+do:
+ionic run android
+
+4. Do other testing as needed.
+
+
+
+
+======Ionic Splash Screen for Android ======
+ionic plugin remove cordova-plugin-splashscreen
+
+ionic plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+
+ionic platform remove android
+
+ionic platform add android
+
+ionic build android
+
+ionic run android
