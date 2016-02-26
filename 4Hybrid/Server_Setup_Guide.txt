@@ -1,0 +1,43 @@
+
+=====================================================================================
+1. Run Gulp
+=====================================================================================
+Modify the files and make necessary code changes, then in terminal, cd to your target folder( conFusion folder), and run following commands:
+
+$: gulp watch
+
+A browser will be launched with following addresses:
+localhost:3001
+
+If there are any errors in your javascript files, gulp will report it.
+You should be able to test your web pages functionalities.
+
+Gulp will detect any further changes you made to the file, so you don’t need to gulp every time.
+
+To stop the watch, do “ctrl + c”
+
+
+=====================================================================================
+2. Run json-server
+=====================================================================================
+
+In terminal, cd to your target folder(json-server folder), and run following commands:
+
+$: json-server --watch db.json
+
+
+=====================================================================================
+3. localhost:3000 and localhost:3001
+=====================================================================================
+When you click a dish detail in localhost:3001, in the terminal, it will show the get dish/1, dish/2
+
+To release a local host:
+
+http://stackoverflow.com/questions/8553957/how-to-release-localhost-from-error-listen-eaddrinuse
+
+$: lsof -i tcp:3000
+$: kill -9 2050
+
+=====================================================================================
+4. Others
+=====================================================================================

@@ -1,4 +1,0 @@
-json-server --watch db.json
-
-ionic serve --lab
-//test your code in a phone frame

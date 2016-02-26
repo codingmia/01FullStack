@@ -16,6 +16,7 @@ then type adb start-server
 No error message is thrown while starting ADB server, then adb is started successfully.
 Now you can start Eclipse again.
 
+
 == run the ionic on GenyMotion ===
 
 1. cd to your Ionic/conFusion folder
@@ -42,3 +43,12 @@ ionic platform add android
 ionic build android
 
 ionic run android
+
+
+======Install other Ionic Plugins for Android ======
+You will need to do :
+platform remove
+platform add
+
+each time you are installing new Ionic pluginss
+
