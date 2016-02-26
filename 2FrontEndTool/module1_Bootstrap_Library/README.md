@@ -3,5 +3,5 @@ Design the web pages for a Restaurant "conFusion", implement the welcome page (i
 
 ## Goals
 * Bootstrap basics
-* Setting up a web project using bootstrap
+* Setting up a web project using bootstrap etc
 * Responsive design
