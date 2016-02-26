@@ -18,7 +18,11 @@ Handles dishdetail.html, contains functions to validate comment form, submit com
 ### View
 Create contactus.html, dishdetail.html, menu.html, binding class to proper ng-controller and binding element to proper ng-model.
 
-## Tools
+## Goals
 
+* Angular JS Scope, forms and form validation
 * Set up Gulp
 * Introduced Grunt and Task Runner
+
+## Others
+dist folder will be a complete package of source code and files for the web application to be distributed across the internet.
