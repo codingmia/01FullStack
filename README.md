@@ -1,16 +1,16 @@
-## Full Stack Web Development from HKUST 
+## Full Stack Web Development
 
-###Course 1: 
-HTML, CSS and Javascipt
+### 1: 
+HTML, CSS, Javascipt
 
-###Course 2
-Front-End Web UI Frameworks and Tools
+### 2
+BootsTrap and Other Tools
 
-###Course 3
-Front-End Javascript Frameworks: AngularJS
+### 3
+AngularJS
 
-###Course 4
-Multiplatform Mobile App Development with Web Technologies
+### 4
+Hybrid Mobile Development
 
-###Course 5
-Server-side Development with NodeJS
+### 5
+Node.js Express MongoDB
